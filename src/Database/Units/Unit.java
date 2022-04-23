@@ -1,0 +1,87 @@
+package Database.Units;
+
+import Database.Resources.StrategicResource;
+
+public class Unit {
+    protected int cost;
+    protected String combattype;
+    protected int combaStrength;
+    protected int rangedCombatStrength;
+    protected int movement;
+    protected StrategicResource requiredresources;
+    protected int experiencepoint;
+    protected int type;
+    protected String location;
+    protected String typename;
+
+    public void fortify() {
+
+    }
+
+    public void fortifyFullHealth() {
+
+    }
+
+    public void increaseLevel() {
+
+    }
+
+    public void move() {
+
+    }
+
+    public void sleep() {
+
+    }
+
+    public void beReady() {
+
+    }
+
+    public void Attack() {
+
+    }
+
+    public void defend() {
+
+    }
+
+    public void isReady() {
+
+    }
+    
+    public void moveTo() {
+
+    }
+    
+    public void remove() {
+    }
+    
+    public void wakeUp() {
+
+    }
+    
+    public void cancelOrder() {
+
+    }
+    
+    public void foundcity() {
+
+    }
+    
+    public void improveStrength() {
+
+    }
+    
+    public void improveHealth() {
+
+    }
+    
+    public void settle() {
+
+    }
+    
+    public void plunder() {
+
+    }
+}
