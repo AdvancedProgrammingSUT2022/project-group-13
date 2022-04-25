@@ -1,8 +1,11 @@
-import View.LoginMenu;
+import Controller.LoginPageController;
+import Controller.PlayerDataBase;
+import View.LogInPageView;
 
 public class Main {
-    public static void main(String args[]) {
-    LoginMenu loginmenu = new LoginMenu();
-    loginmenu.run();
+    public static void main(String[] args) {
+        PlayerDataBase playerDataBase = new PlayerDataBase();
+        LogInPageView logInPageView = new LogInPageView(new LoginPageController(playerDataBase));
+        logInPageView.showMenu();
     }
 }
