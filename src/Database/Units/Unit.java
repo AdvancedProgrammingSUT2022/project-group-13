@@ -1,5 +1,6 @@
 package Database.Units;
 
+import Database.Block.Tile;
 import Database.Resources.StrategicResource;
 
 public class Unit {
@@ -13,7 +14,13 @@ public class Unit {
     protected int type;
     protected String location;
     protected String typename;
-
+    protected Tile tile;
+    public Tile getTile() {
+        return tile;
+    }
+    public void setTile(Tile tile) {
+        this.tile = tile;
+    }
     public void fortify() {
 
     }
