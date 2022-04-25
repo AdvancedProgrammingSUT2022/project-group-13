@@ -1,1 +1,0 @@
-private ArrayList<Building>buildings=new ArrayList<>();
