@@ -1,5 +1,5 @@
-
-public class Main {
+package View;
+public class MapDrawer {
     public static void main(String[] args){
         String[] map= new String[27];
         String WHITE = "\u001B[37m";
@@ -201,7 +201,7 @@ public class Main {
         else if(x==3)
             map[6*y+4]=map[6*y+4].substring(0,75)+CivilizationColor+Civilization+map[6*y+4].substring(81);
     }
-    public static void changemillitaryUnit(String[] map,int x,int y,String millitaryUnit,String militaryUnitColor){
+    public static void changeMillitaryUnit(String[] map,int x,int y,String millitaryUnit,String militaryUnitColor){
         if(x==0)
             map[6*y+3]=map[6*y+3].substring(0,9)+militaryUnitColor+millitaryUnit+map[6*y+3].substring(15);
         else if(x==1&&y!=3)

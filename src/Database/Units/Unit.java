@@ -2,6 +2,7 @@ package Database.Units;
 
 import Database.Block.Tile;
 import Database.Resources.StrategicResource;
+import View.MapDrawer;
 
 public class Unit {
     protected int cost;
@@ -33,8 +34,8 @@ public class Unit {
 
     }
 
-    public void move() {
-          
+    public void move(String[] map,int x,int y,String millitaryUnit,String millitaryUnitColor) {
+                MapDrawer.changeMillitaryUnit(map, x, y, millitaryUnit, millitaryUnitColor);
     }
 
     public void sleep() {
