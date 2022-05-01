@@ -1,95 +1,46 @@
 package Database.Units;
 
+
 import Database.Block.Tile;
-import Database.Resources.StrategicResource;
-import View.MapDrawer;
 
 public class Unit {
-    protected int cost;
-    protected String combattype;
-    protected int combaStrength;
-    protected int rangedCombatStrength;
-    protected int movement;
-    protected StrategicResource requiredresources;
-    protected int experiencepoint;
-    protected int type;
-    protected String location;
-    protected String typename;
-    protected Tile tile;
+    private int HP;
+    private int mana;
+    private Tile tile;
+    private int combatStrength;
+    public final int COST;
+
     public Tile getTile() {
         return tile;
     }
+
+    Unit(int HP, int mana, Tile tile, int COST, int combatStrength) {
+        this.HP = HP;
+        this.mana =mana;
+        this.tile = tile;
+        this.COST = COST;
+        this.combatStrength = combatStrength;
+    }
+
     public void setTile(Tile tile) {
         this.tile = tile;
     }
-    public void fortify() {
 
+    public int getMana() {
+        return mana;
     }
 
-    public void fortifyFullHealth() {
-
+    public int getCombatStrength() {
+        return combatStrength;
     }
 
-    public void increaseLevel() {
-
+    public void istheTileVisible(int x, int y) {
+        //will be boolean l8er
     }
-
-    public void move(String[] map,int x,int y,String millitaryUnit,String millitaryUnitColor) {
-                MapDrawer.changeMillitaryUnit(map, x, y, millitaryUnit, millitaryUnitColor);
+    public void move(Tile tile){
+        this.tile = tile;
     }
-
-    public void sleep() {
-
-    }
-
-    public void beReady() {
-
-    }
-
-    public void Attack() {
-
-    }
-
-    public void defend() {
-
-    }
-
-    public void isReady() {
-
-    }
-    
-    public void moveTo() {
-
-    }
-    
-    public void remove() {
-    }
-    
-    public void wakeUp() {
-
-    }
-    
-    public void cancelOrder() {
-
-    }
-    
-    public void foundcity() {
-
-    }
-    
-    public void improveStrength() {
-
-    }
-    
-    public void improveHealth() {
-
-    }
-    
-    public void settle() {
-
-    }
-    
-    public void plunder() {
-
+    public void setMana(int mana) {
+        this.mana = mana;
     }
 }

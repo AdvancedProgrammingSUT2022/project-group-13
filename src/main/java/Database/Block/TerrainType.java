@@ -6,8 +6,9 @@ public class TerrainType {
     protected int gold;
     protected int food;
     protected int production;
-    protected float combatmodifier;
+    protected double combatmodifier;
     protected boolean ismovingpossible;
+    protected boolean isvisible=true;
     protected TerrainFeature terrainfeature;
 
     public TerrainType(String state,TerrainFeature terrainfeature) {
@@ -40,8 +41,7 @@ public class TerrainType {
         this.combatmodifier = combatmodifier;
         this.ismovingpossible = ismovingpossible;
     }
-
-    public float getCombatmodifier() {
+    public double getCombatmodifier() {
         return combatmodifier;
     }
 
@@ -67,5 +67,13 @@ public class TerrainType {
 
     public TerrainFeature getTerrainfeature() {
         return terrainfeature;
+    }
+
+    public boolean getIsmovingpossible() {
+        return ismovingpossible;
+    }
+
+    public boolean getIsvisible() {
+        return isvisible;
     }
 }

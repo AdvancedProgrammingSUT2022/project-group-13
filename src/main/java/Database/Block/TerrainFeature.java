@@ -6,9 +6,9 @@ public class TerrainFeature {
     protected int gold;
     protected int food;
     protected int production;
-    protected float combatmodifier;
+    protected double combatmodifier;
     protected boolean ismovingpossible;
-
+protected  boolean isvisible;
     public TerrainFeature(String state) {
         this.state = state;
         if (state.equals("FloodPlains"))
@@ -35,7 +35,7 @@ public class TerrainFeature {
         this.ismovingpossible = ismovingpossible;
     }
 
-    public float getCombatmodifier() {
+    public double getCombatmodifier() {
         return combatmodifier;
     }
 
@@ -57,5 +57,13 @@ public class TerrainFeature {
 
     public String getState() {
         return state;
+    }
+
+    public boolean getIsvisible() {
+        return isvisible;
+    }
+
+    public boolean getIsmovingpossible() {
+        return ismovingpossible;
     }
 }
