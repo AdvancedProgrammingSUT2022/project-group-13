@@ -6,12 +6,32 @@ public class User {
     private String password;
     private String nickname;
     private int score;
+    private int gold;
+    private int turns;
 
     public User(String name, String nickname, String password) {
         this.name = name;
         this.password = password;
         this.nickname = nickname;
+        turns=0;
+        gold=0;
         score = 0;
+    }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public int getTurns() {
+        return turns;
+    }
+
+    public void setGold(int gold) {
+        this.gold += gold;
+    }
+
+    public void setTurns(int turns) {
+        this.turns += turns;
     }
 
     public String getName() {
