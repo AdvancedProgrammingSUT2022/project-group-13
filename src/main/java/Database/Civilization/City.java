@@ -16,6 +16,7 @@ public class City {
     private int production;
     private int health;
     private int fightingPower;
+    private String name;
     //////////////////////////
 
 
@@ -49,6 +50,10 @@ public class City {
 
     public ArrayList<Citizen> getCitizens() {
         return citizens;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public ArrayList<Tile> getTiles() {
@@ -132,5 +137,4 @@ public class City {
         citizen.assignToTile(tile);
     }
     //////////////////////////////////////////
-
 }

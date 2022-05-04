@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Database.Building.Improvement;
 import Database.Civilization.Citizen;
+import Database.Civilization.City;
 import Database.Civilization.Civilization;
 import Database.Units.CivilianUnit;
 import Database.Units.MilitaryUnit;
@@ -22,6 +23,7 @@ public class Tile {
     private MilitaryUnit militaryUnit;
     private CivilianUnit civilianUnit;
     private Citizen workingCitizen;
+    private City city;
     private boolean ismovingpossible;
 
     ////////////constructor
@@ -51,6 +53,10 @@ public class Tile {
         getGoldT+=countRivers();
         return getGoldT;
     }
+
+    public City getCity() {
+        return city;
+    }
     ///////////////////////////
 
     public double getCombatModifier() {
@@ -65,6 +71,13 @@ public class Tile {
         return cost;
     }
 
+    public void setMilitaryUnit(MilitaryUnit militaryUnit) {
+        this.militaryUnit = militaryUnit;
+    }
+
+    public void setCivilianUnit(CivilianUnit civilianUnit) {
+        this.civilianUnit = civilianUnit;
+    }
 
     public MilitaryUnit getMilitaryUnit() {
         return militaryUnit;

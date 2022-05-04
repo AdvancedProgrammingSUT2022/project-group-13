@@ -17,6 +17,7 @@ public class Civilization {
     private HashMap<Resource, Integer> resources;
     private int happiness;
     private ArrayList<Unit> units;
+    private Unit selectedunit;
     private boolean[][] fogOfWar;
     private boolean[][] Visible;
     private boolean visibleTileFindFlag;
@@ -30,6 +31,9 @@ public class Civilization {
         this.HEIGHT=HEIGHT;
     }
 
+    public ArrayList<Unit> getUnits() {
+        return units;
+    }
 
     public boolean hasTechnology(Technology technology) {
         if(!technologies.contains(technology))
@@ -80,4 +84,11 @@ public class Civilization {
     /////////////////////////////////////////////////////////
 
 
+    public Unit getSelectedUnit() {
+        return selectedunit;
+    }
+
+    public void setSelectedUnit(Unit selectedunit) {
+        this.selectedunit = selectedunit;
+    }
 }

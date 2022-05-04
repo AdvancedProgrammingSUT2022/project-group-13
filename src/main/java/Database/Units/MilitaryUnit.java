@@ -5,10 +5,7 @@ import Database.Block.Tile;
 
 public class MilitaryUnit extends Unit{
     private int XP;
-    private boolean isSleep;
-    private boolean isOnFortify;
-    private boolean isOnAlert;
-    private boolean isOnGarrison;
+
     private final int RANGE;
     private int lastActionTurn;
 
@@ -16,27 +13,8 @@ public class MilitaryUnit extends Unit{
                         int range, int lastActionTurn, int HP, int mana, Tile tile, int combatStrength, int price){
         super(HP, mana, tile, price, combatStrength);
         this.XP = XP;
-        this.isSleep = isSleep;
-        this.isOnFortify = isOnFortify;
-        this.isOnAlert = isOnAlert;
-        this.isOnGarrison = isOnGarrison;
         this.RANGE = range;
         this.lastActionTurn = lastActionTurn;
-    }
-    public void sleep() {
-        this.isSleep = true;
-    }
-    public void fortify() {
-        this.isOnFortify = true;
-    }
-    public void alert() {
-        this.isOnAlert = true;
-    }
-    public void garrison() {
-        this.isOnGarrison = true;
-    }
-    public void wakeUp(){
-        this.isSleep = false;
     }
 
     public int getLastActionTurn() {

@@ -10,7 +10,6 @@ public class TerrainType {
     protected boolean ismovingpossible;
     protected boolean isvisible=true;
     protected TerrainFeature terrainfeature;
-
     public TerrainType(String state,TerrainFeature terrainfeature) {
         this.state = state;
         if (state.equals("Ocean"))
@@ -61,7 +60,7 @@ public class TerrainType {
         return production;
     }
 
-    public String getState() {
+    public String getType() {
         return state;
     }
 

@@ -1,5 +1,6 @@
 package View;
 
+import Controller.Cheat;
 import Controller.GamePageController;
 import Controller.User;
 
@@ -44,9 +45,18 @@ public class GameView {
                 PlayGame(Abbreviation_playGame);
                 continue;
             }
+            if (command.matches("increase [-]turn \\d+")) {
+                Cheat.turnCheat(new User("Mock", "Mock", "Mock"), Integer.parseInt(command.split(" ")[2]));
+                continue;
+            }
+            if (command.matches("increase [-]gold \\d+")) {
+                Cheat.goldCheat(new User("Mock", "Mock", "Mock"), Integer.parseInt(command.split(" ")[2]));
+                continue;
+            }
             invalidMessage();
         }
     }
+
     public void showMenu() {
         run();
     }
@@ -74,8 +84,7 @@ public class GameView {
         ArrayList<User> players = new ArrayList<>();
         for (int i = 1; i < subCommands.length; i++) {
             User player = gamePageController.getPlayerDataBase().getUser(subCommands[i]);
-            if (player == null)
-            {
+            if (player == null) {
                 System.out.println("player " + subCommands[i] + " was not exist!");
                 return;
             }

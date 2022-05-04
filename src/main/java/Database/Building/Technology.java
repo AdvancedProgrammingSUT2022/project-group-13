@@ -41,8 +41,8 @@ public class Technology{
             setFields("Construction",100,"Classical",new ArrayList<Technology>(Arrays.asList()));
         if(type.equals("Horse_Riding"))
             setFields("Horse_Riding",100,"Classical",new ArrayList<Technology>(Arrays.asList()));
-        if(type.equals("Smithing"))
-            setFields("Smithing",150,"Classical",new ArrayList<Technology>(Arrays.asList()));
+        if(type.equals("Iron_Working"))
+            setFields("Iron_Working",150,"Classical",new ArrayList<Technology>(Arrays.asList()));
         if(type.equals("Mathematics"))
             setFields("Mathematics",100,"Classical",new ArrayList<Technology>(Arrays.asList()));
         if(type.equals("Philosophy"))
